@@ -7,5 +7,11 @@
 
 {% block content %}
 	
+	{% for message in messages %}
+		<div class=row message">
+			{{ message.horodatage|datetimeformat('%d-%m-%Y') }}
+		</div>
+	{% endfor %}
+
 {% endblock %}
 
