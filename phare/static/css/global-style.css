@@ -4,3 +4,7 @@
 img#entete-img {
 	width: 128px;
 }
+h1#titre {
+	float: right;
+
+}

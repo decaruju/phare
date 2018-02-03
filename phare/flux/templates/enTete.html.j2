@@ -1,6 +1,12 @@
-<header class="container-fluid">
+<header>
 	{% load staticfiles %}
-	<img src="{% static 'images/enTete.png' %}" alt="Icône phare" />
-	<h1>Phare</h1>
-	<h4>Soutien à l'évacuation</h4>
+	<div class="row">	
+		<div  class="col-sm-4">	
+			<img src="{% static 'images/enTete.png' %}" alt="Icône phare" id="entete-img"/>
+		</div>
+		<div class="col-sm-8">
+			<h1 id=titre">Phare</h1>
+			<h4>Soutien à l'évacuation</h4>
+		</div>
+	</div>
 </header>

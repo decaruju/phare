@@ -32,7 +32,6 @@ ALLOWED_HOSTS = ['192.168.108.143', '127.0.0.1']
 
 INSTALLED_APPS = [
     'flux',
-    'address',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -107,13 +106,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
 def gettext(s): 
-    s
-
-LANGUAGE_CODE = 'en-us'
-LANGUAGES = (
-    ('en-us', gettext('English')),
-    ('fr-ca', gettext('French')),
-)
+    LANGUAGE_CODE = 'en-us'
+    LANGUAGES = (
+        ('en-us', gettext('English')),
+        ('fr-ca', gettext('French')),
+    )
 
 TIME_ZONE = 'UTC'
 
