@@ -15,9 +15,9 @@ class Message(models.Model):
 
 
 class Utilisateur(models.Model):
-    nom = models.CharField()
-    adresse = models.CharField()
+    nom = models.CharField(max_length=18)
+    adresse = models.CharField(max_length=30)
 
 
 class Autorite(models.Model):
-    nom = models.CharField()
+    nom = models.CharField(max_length=18)
