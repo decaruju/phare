@@ -4,6 +4,6 @@ from . import views
 
 urlpatterns = [
     path('', views.index),
-    path('/tous-les-messages', views.tous_messages, name="tous_messages"),
+    path('messages', views.tous_messages),
 
 ]
