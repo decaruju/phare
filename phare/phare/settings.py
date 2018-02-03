@@ -64,6 +64,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.i18n',
             ],
         },
     },
@@ -112,6 +113,12 @@ def gettext(s):
         ('fr-ca', gettext('French')),
     )
 
+LANGUAGE_CODE = 'fr-ca'
+LANGUAGES = (
+    ('en-us', gettext('English')),
+    ('fr-ca', gettext('French')),
+)
+
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
@@ -128,4 +135,8 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
+)
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, '/locale/'),
 )
