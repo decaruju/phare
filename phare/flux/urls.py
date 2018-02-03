@@ -5,5 +5,5 @@ from . import views
 from flux.models import Message
 
 urlpatterns = [
-    path('', views.tous_messages),
+    path('', views.tous_messages, name="flux"),
 ]
