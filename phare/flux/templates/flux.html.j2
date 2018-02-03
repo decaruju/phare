@@ -1,3 +1,7 @@
 {% extends "base.html.j2" %}
 
+{% load staticfiles %}
 
+{% block stylesheets %}
+	<link rel="stylesheet" href="{% static 'flux/css/flux.css' %}" type="text/css" /> 
+{% endblock %}
