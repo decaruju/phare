@@ -1,11 +1,13 @@
 {# Page affichant l'ensemble des messages aux utilisateurs #}
 
 {% block title %}
-	{% trans "Messages des autorités" %}
+	{# trans "Messages des autorités" #}
 {% endblock %}
 
 
 {% block content %}
-	
+	{% for message in messages %}
+	{{ message.message_fr }}
+	{% endfor %}	
 {% endblock %}
 
