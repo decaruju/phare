@@ -1,7 +1,14 @@
 from django.db import models
 from django.conf import settings
 from django.contrib.auth.models import User
-from address.models import AddressField
+
+TYPE_BATIMENT = (
+    ('r', 'résidentiel'),
+    ('c', 'commercial'),
+    ('b', 'bureau'),
+    ('i', 'industriel'),
+    ('p', 'public'),
+)
 
 TYPE_MESSAGE = (
         ('u','urgent'),
@@ -18,7 +25,13 @@ class Message(models.Model):
 
 class Citoyen(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    adresse = models.CharField(max_length=30)
 
 class Batiment(models.Model):
-    pass
+    adresse = models.CharField(max_length=30)
+    code_postal = models.CharField(max_length=6)
+    population = models.IntegerField(default=-1)
+    mobilite_reduite = models.BooleanField()
+    type_batiment = models.CharField(max_length=1, choices=TYPE_BATIMENT)
+    gaz_naturel = models.BooleanField()
+    propane = models.BooleanField()
+    autre_danger = models.CharField(max_length=80)
