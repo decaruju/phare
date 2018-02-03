@@ -18,4 +18,4 @@ class Message(models.Model):
 
 class Citoyen(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    #adresse = AddressField(on_delete=models.CASCADE)
+#    adresse = AddressField(on_delete=models.DO_NOTHING)
