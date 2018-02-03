@@ -15,10 +15,3 @@ class Message(models.Model):
     type_message = models.CharField(max_length=1, choices=TYPE_MESSAGE)
 
 
-class Utilisateur(models.Model):
-    nom = models.CharField(max_length=18)
-    adresse = models.CharField(max_length=30)
-
-
-class Autorite(models.Model):
-    nom = models.CharField(max_length=18)
