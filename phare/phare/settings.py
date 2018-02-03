@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['192.168.108.143', '127.0.0.1']
 
 INSTALLED_APPS = [
     'flux',
+    'resources',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
