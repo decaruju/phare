@@ -11,6 +11,13 @@
 	</head>
 	
 	<body>
-
+		{% include 'enTete.html.j2' %}
+		{% include 'menu.html.j2' %}
+		<article>
+			{% block content %}
+			
+			{% endblock %}
+		</article>
+		{% include 'piedPage.html.j2' %}
 	</body>
 </html>
