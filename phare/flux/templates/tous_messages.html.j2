@@ -1,6 +1,6 @@
 {# Page affichant l'ensemble des messages aux utilisateurs #}
 
-{% extends flux.html.j2 %}
+{% extends 'flux.html.j2' %}
 
 {% block title %}
 	{# trans "Messages des autorités" #}
@@ -10,7 +10,7 @@
 {% block content %}
 	{% for message in messages %}
 		<div class=row message">
-			{{ message.horodatage|datetimeformat('%d-%m-%Y') }}
+			{{ message.horodatage|date:'d-m-Y'}}
 		</div>
 	{% endfor %}
 {% endblock %}
