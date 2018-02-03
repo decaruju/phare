@@ -21,4 +21,4 @@ class Citoyen(models.Model):
     adresse = models.CharField(max_length=30)
 
 class Batiment(models.Model):
-    adresse
+    pass
