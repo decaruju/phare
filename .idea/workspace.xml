@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff4ba0dd-fc21-465c-a217-076ef4c95cf9" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/phare/flux/templates/enTete.html.j2" afterPath="$PROJECT_DIR$/phare/flux/templates/enTete.html.j2" />
-      <change beforePath="$PROJECT_DIR$/phare/flux/templates/piedPage.html.j2" afterPath="$PROJECT_DIR$/phare/flux/templates/piedPage.html.j2" />
-      <change beforePath="$PROJECT_DIR$/phare/flux/urls.py" afterPath="$PROJECT_DIR$/phare/flux/urls.py" />
+      <change beforePath="$PROJECT_DIR$/phare/phare/settings.py" afterPath="$PROJECT_DIR$/phare/phare/settings.py" />
+      <change beforePath="$PROJECT_DIR$/phare/phare/urls.py" afterPath="$PROJECT_DIR$/phare/phare/urls.py" />
+      <change beforePath="$PROJECT_DIR$/phare/resources/admin.py" afterPath="$PROJECT_DIR$/phare/resources/admin.py" />
+      <change beforePath="$PROJECT_DIR$/phare/resources/models.py" afterPath="$PROJECT_DIR$/phare/resources/models.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,17 +29,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="enTete.html.j2" pinned="false" current-in-tab="true">
+      <file leaf-file-name="enTete.html.j2" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/phare/flux/templates/enTete.html.j2">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="235">
-              <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="piedPage.html.j2" pinned="false" current-in-tab="false">
+      <file leaf-file-name="piedPage.html.j2" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/phare/flux/templates/piedPage.html.j2">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -460,14 +460,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/phare/flux/templates/piedPage.html.j2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phare/flux/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -497,7 +489,15 @@
     <entry file="file://$PROJECT_DIR$/phare/flux/templates/enTete.html.j2">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
-          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phare/flux/templates/piedPage.html.j2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
           <folding />
         </state>
       </provider>

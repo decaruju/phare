@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['192.168.108.143', '127.0.0.1']
 
 INSTALLED_APPS = [
     'flux',
+    'resources',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -56,7 +57,7 @@ ROOT_URLCONF = 'phare.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [(os.path.join(BASE_DIR, 'templates')),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -136,3 +137,5 @@ STATICFILES_DIRS = (
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, '/locale/'),
 )
+
+LOGIN_REDIRECT_URL = 'accueil'
