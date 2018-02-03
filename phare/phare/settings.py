@@ -64,6 +64,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.i18n',
             ],
         },
     },
@@ -105,12 +106,14 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-def gettext(s): 
-    LANGUAGE_CODE = 'en-us'
-    LANGUAGES = (
-        ('en-us', gettext('English')),
-        ('fr-ca', gettext('French')),
-    )
+def gettext(s):
+    s
+
+LANGUAGE_CODE = 'fr-ca'
+LANGUAGES = (
+    ('en-us', gettext('English')),
+    ('fr-ca', gettext('French')),
+)
 
 TIME_ZONE = 'UTC'
 
@@ -128,4 +131,8 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
+)
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, '/locale/'),
 )
