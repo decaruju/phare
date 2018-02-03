@@ -1,5 +1,7 @@
 from django.db import models
-
+from django.conf import settings
+from django.contrib.auth.models import User
+from address.models import AddressField
 
 TYPE_MESSAGE = (
         ('u','urgent'),
@@ -14,4 +16,6 @@ class Message(models.Model):
     message_en = models.TextField()
     type_message = models.CharField(max_length=1, choices=TYPE_MESSAGE)
 
-
+class Citoyen(models.Model):
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    #adresse = AddressField(on_delete=models.CASCADE)
