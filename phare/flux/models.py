@@ -18,4 +18,7 @@ class Message(models.Model):
 
 class Citoyen(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    adresse = AddressField()
+    adresse = models.CharField(max_length=30)
+
+class Batiment(models.Model):
+    adresse
