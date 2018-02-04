@@ -3,12 +3,16 @@
 {% extends 'ressources.html' %}
 
 {% load staticfiles %}
+{% load i18n %}
 
 {% block title %}
 	Sélectionner une ressource
 {% endblock %}
 
 {% block content %}
+
+	{% get_current_language as LANGUAGE %}
+	{{ LANGUAGE }}
 	<div class="row">
 		<div class="col-md-3">&nbsp;</div>
 		<div class="col-md-3 ressource_choix" id="ressource_medical">
