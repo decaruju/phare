@@ -20,9 +20,9 @@ from .views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('🍆/', admin.site.urls),
     path('flux/', include('flux.urls')), 
     path('ressources/', include('ressources.urls')), 
+    path('quefaire/', include('quefaire.urls')),
 
     path('', index, name='accueil'), 
     path(r'i18n/', include('django.conf.urls.i18n')),
