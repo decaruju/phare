@@ -23,22 +23,20 @@
                         value="en"
                     {% endif %}
                 type="hidden"/>
-                <button type="submit" class="btn btn-link">FR/EN</button>
+                <button type="submit" class="btn btn-link" id="echange_langue">FR/EN</button>
             </form>
 			{% if user.is_authenticated %}
-			<a href="/profile">
-				<button class="btn btn-primary">{{ user.username }} </button>
-            </a>
+            <span id="user_id">{{ user.username }} </span>
             <form action="{% url 'logout' %}">
-                    <button class="btn btn-primary">{% trans 'Déconnexion' %}</button>
+                    <button class="btn btn-primary" id="btn_deco">{% trans 'Déconnexion' %}</button>
             </form>
 
 			{% else %}
             <a href="/signup">
-                    <button class="btn btn-primary">{% trans "S'inscrire" %}</button>
+                    <button class="btn btn-primary" id="btn_inscription">{% trans "S'inscrire" %}</button>
             </a>
             <form action="{% url 'login' %}">
-                    <button class="btn btn-primary">{% trans 'Connexion' %}</button>
+                    <button class="btn btn-primary" id="btn_conf1">{% trans 'Connexion' %}</button>
             </form>
 			{% endif %}
         </div>
