@@ -114,7 +114,7 @@ def gettext(s):
 
 LANGUAGE_CODE = 'fr-ca'
 LANGUAGES = (
-    ('en-us', gettext('Anglais')),
+    ('en', gettext('Anglais')),
     ('fr-ca', gettext('Français')),
 )
 
