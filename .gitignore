@@ -47,8 +47,7 @@ coverage.xml
 .hypothesis/
 
 # Translations
-*.mo
-*.pot
+
 
 # Django stuff:
 *.log
@@ -104,4 +103,3 @@ ENV/
 *~
 .vscode/
 
-*.sqlite3
