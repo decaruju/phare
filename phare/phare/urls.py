@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
-from .views import index
+from .views import index, signup
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,6 +26,7 @@ urlpatterns = [
 
     path('', index, name='accueil'), 
     path(r'i18n/', include('django.conf.urls.i18n'), name='changement_langue'),
+    path(r'signup/', signup, name='signup'),
     path(r'login/', auth_views.login, name='login'),
     path(r'logout/', auth_views.logout, name='logout'),
 ]
