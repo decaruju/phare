@@ -1,0 +1,30 @@
+div.ressource_choix {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+div.ressource_choix p {
+	text-align: center;
+	margin: 0px;
+	font-weight: bold;
+	padding: 5pt; 
+}
+div#ressource_medical {
+	background-color: rgb(255, 50, 50);
+}
+div#ressource_hebergement {
+	background-color: rgb(50, 225, 50);
+}
+div#ressource_nourriture {
+	background-color: rgb(125, 125, 225);
+}
+div#ressource_financiere {
+	background-color: rgb(225, 225, 50);
+}
+div#ressource_psychologique {
+	background-color: rgb(225, 50, 225);
+}
+div#ressource_biens_essentiels {
+	background-color: rgb(50, 225, 225);
+}

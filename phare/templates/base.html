@@ -26,13 +26,13 @@
 	</head>
 	
 	<body>
-		{% include 'enTete.html.j2' %}
-		{% include 'menu.html.j2' %}
+		{% include 'en_tete.html' %}
+		{% include 'menu.html' %}
 		<div class="container-fluid">
 			{% block content %}
 			
 			{% endblock %}
 		</div>
-		{% include 'piedPage.html.j2' %}
+		{% include 'pied_page.html' %}
 	</body>
 </html>

@@ -5,4 +5,4 @@ from flux.models import Message
 
 
 def index(request):
-    return render(request, "accueil.html.j2") 
+    return render(request, "accueil.html") 
