@@ -27,6 +27,9 @@ class Message(models.Model):
 
 class Citoyen(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    mobilite_reduite = models.BooleanField()
+    matiere_dangereuse = models.BooleanField()
+    nombre_individus = models.IntegerField()
 
 class Batiment(models.Model):
     adresse = models.CharField(max_length=30)

@@ -5,20 +5,34 @@ from django import forms
 from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login
+from django.conf import settings
+from django.contrib.auth.models import User
+
 
 def index(request):
     return render(request, "accueil.html") 
 
 class SignupForm(ModelForm):
-    username = forms.CharField()
-    email = forms.EmailField()
-    raw_password = forms.CharField(widget=forms.PasswordInput)
-    Prénom = forms.CharField()
-    last_name = forms.CharField()
+    class Meta:
+        password = forms.CharField(widget=forms.PasswordInput)
+        model = User
+        fields = '__all__'
+        exclude = [
+                'groups',
+                'last_login',
+                'user_permissions',
+                'is_staff',
+                'is_active',
+                'is_superuser',
+                'date_joined'
+        ]
+        widgets = {
+                'password': forms.PasswordInput()
+        }
 
 def signup(request):
     if request.method == 'POST':
-        form = SignupForm(request.POST)
+        form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
@@ -27,6 +41,6 @@ def signup(request):
             login(request, user)
             return redirect('accueil')
     else:
-        form = SignupForm()
+        form = UserCreationForm()
     return render(request, 'signup.html', {'form': form})
 
