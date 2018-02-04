@@ -1,0 +1,83 @@
+{# Affiches les citoyens connectés #}
+
+{% extends 'base.html' %}
+
+{% load i18n %}
+{% load staticfiles %}
+
+{% block scripts %}
+	<script>
+		var map;
+		function initMap() {
+			var trou = {lat: 46.540, lng: -72.753};
+			map = new google.maps.Map(document.getElementById('map'), {
+			  zoom: 9,
+			  center: trou
+			});
+	 	 }
+	</script>
+{% endblock %}
+
+{% block content %}
+
+	<h2>{% trans "Vue des citoyens" %}</h2>
+	<p class="text-secondary"><a href="#carte">{% trans "Voir la carte" %}</a></p>
+	<div class="row">
+		<div class="col-12">
+			<div class="table-responsive">
+				<table class="table table-condensed table-stripped table-bordered">
+					<tr><th>{% trans "Nom" %}</th><th>{% trans "Adresse" %}</th><th>{% trans "Matière dangereuse" %}</th><th>{% trans "Mobilité réduite" %}</th><th>{% trans "Nombre d'individus" %}</tr>
+					{% for c in citoyens %}
+						<tr>
+							<td>{{ c.user.username }}</td><td>{{ c.adresse }}</td><td>{{ c.matiere_dangereuse }}</td><td>{{ c.mobilite_reduite }}</td><td>{{ c.nombre_individus }}</td>
+						</tr>					
+					{% endfor %}
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="row" id="carte">
+		<div class="col-12">
+			<div id="map" style="height:500px"></div>
+		</div>	
+	</div>
+
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFzmy_UhVDjvynIXwXjFnGbKySoM_gb9o&callback=initMap"></script>
+	<script>
+		ajoutMarqueur = function(lat, lng, md, mr, nb, addr, us) {
+			var desc = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h6 id="firstHeading" class="firstHeading">' + addr + '</h6>'+
+            '<div id="bodyContent">'+
+			'Nom : ' + us + '</br>' +
+			'Présence de matière dangereuse : ' + md + '<br />'+
+			'Personne à mobilité réduite : ' + mr + '<br />' +
+			'Nombre de personnes : ' + nb +
+            '</div>'+
+            '</div>';
+			
+			var infowindow = new google.maps.InfoWindow({
+				  content: desc
+				});
+
+			var marqueur = new google.maps.Marker({
+				position: {lat:lat, lng:lng},
+				map: map,
+				title: addr,
+			});
+
+			marqueur.addListener('click', function() {
+		      infowindow.open(map, marqueur);
+		    });
+		}
+		{% for c in citoyens %}	
+			ajoutMarqueur({{ c.latitude }}, {{ c.longitude }}, "{{ c.matiere_dangereuse }}", "{{ c.mobilite_reduite }}", "{{ c.nombre_individus }}", "{{ c.adresse }}", "{{ c.user.username }}");	
+		{% endfor %}
+
+	</script>	
+
+	
+
+{% endblock %}
