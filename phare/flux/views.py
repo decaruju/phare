@@ -2,6 +2,7 @@ from django.shortcuts import render_to_response, render
 from django.template import RequestContext
 from django.http import HttpResponse
 from flux.models import Message
+from flux.models import Citoyen
 
 
 def index(request):
@@ -17,5 +18,5 @@ def tous_messages(request):
 def vue_citoyen(request):
     citoyens = Citoyen.objects.order_by('-adresse')
     context = RequestContext(request)
-    context_dict = {'messages': messages}
-    return render_to_response('vue_citoyen.html', context_dict, context)
+    context_dict = {'citoyens': citoyens}
+    return render_to_response('vue_citoyens.html', context_dict, context)
