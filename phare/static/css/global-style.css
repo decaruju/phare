@@ -1,6 +1,4 @@
-/*
- * En-tête
- */
+/* ---- Styles pour En-tête ---- */
 img#entete-img {
 	width: 128px;
 }
@@ -10,4 +8,24 @@ h1#titre {
 }
 h2 {
 	margin-top: 20px;
+}
+#ent_boutons{
+	text-align:right;
+}
+
+/* ---- Styles pour pied de page ---- */
+#pp_info{
+	background-color:#546e7a;
+	color:white;
+	padding-top:1em
+}
+#pp_info a, #pp_signature a{
+	color:white;
+}
+#pp_signature, #pp_signature a{
+	background-color:#29434e;
+	width:100%;
+	height:30px;
+	text-align:center;
+	color:white;
 }
