@@ -18,7 +18,7 @@ TYPE_MESSAGE = (
 # Create your models here.
 class Message(models.Model):
     auteur = models.CharField(max_length=18)
-    horodatage = models.DateTimeField()
+    horodatage = models.DateTimeField(auto_now=True)
     titre_fr = models.CharField(max_length=20)
     titre_en = models.CharField(max_length=20)
     message_fr = models.TextField()
