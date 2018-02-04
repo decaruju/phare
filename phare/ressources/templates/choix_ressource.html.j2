@@ -2,6 +2,33 @@
 
 {% extends 'ressources.html.j2' %}
 
+{% load staticfiles %}
+
 {% block title %}
 	Sélectionner une ressource
+{% endblock %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="{% static 'ressources/css/ressources.css' %}" type="text/css" />
+{% endblock %}
+
+{% block content %}
+	<div class="row">
+		<div class="col-md-3">&nbsp;</div>
+		<div class="col-md-3 ressource_choix" id="ressource_medical">
+			<p>Médical</p>
+		</div>
+		<div class="col-md-3 ressource_choix" id="ressource_hebergement">
+			<p>Hébergement</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">&nbsp;</div>
+		<div class="col-md-3 ressource_choix">
+			<p>Nourriture</p>
+		</div>
+		<div class="col-md-3 ressource_choix">
+			<p>Financier et matériel</p>
+		</div>
+	</div>
 {% endblock %}
