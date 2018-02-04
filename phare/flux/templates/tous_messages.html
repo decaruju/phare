@@ -33,8 +33,12 @@
 				">
 					<div class="message_icone">
 						<img src="
-							{% if message.auteur == "pompier" %} 
+							{% if message.auteur == "pompiers" %} 
 								{% static 'flux/images/pompiers.png' %}
+							{% elif message.auteur == "securite" %}
+								{% static 'flux/images/securite.png' %}
+							{% elif message.auteur == "police" %}
+								{% static 'flux/images/polices.png' %}
 							{% endif %}"						
 						class="img-fluid float-left"/>	
 					</div>				
