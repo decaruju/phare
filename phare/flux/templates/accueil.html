@@ -1,14 +1,30 @@
 {% extends "flux.html" %}
 
 {% load i18n %}
+{% load staticfiles %}
 
 {% block title %}
 	Hello !
 {% endblock %}
 
+{% block stylesheets %}
+	<link rel="sytlesheet" href="{% static 'flux/css/accueil.css' %}" type="text/css"/>
+{% endblock %}
+
 {% block content %}
-	{% get_current_language as LANGUAGE %}
-	{{ LANGUAGE }}
-	
-	{% trans 'allo' %}
+	<h2>{% trans 'Acceuil' %}</h2>
+	<p>{% trans "L'application web PHARE est un assistant de communication entre les autorités et la population lors de sitatuation de crise. Il s'agit aussi d'un source d'information pour se préparer et réagir adéquatement selon la situation" %}</p>.
+	<div class="row">
+		<div class="col-6" id="evenements">
+			<h4>{% trans 'Événements en cours' %}</h4>
+			<p class="text-danger">{% trans "Innondation - Centre-ville de Shawinigan" %}</p>
+			<p class="text-danger">{% trans "Crue des eaux - Haute-Mauricie" %}</p>
+			<p class="text-danger">{% trans "Évacuations - Centre-ville de Shawinigan" %}</p>
+		</div>
+		<div class="col-6">
+			<h4>{% trans 'Rappels' %}</h4>
+			<p>{% trans "En période hivernale assurez-vous de garder une pelle et une couverture dans votre voiture." %}</p>
+			<p>{% trans "Avez-vous un plan d'évacuation de votre domicile en cas d'incendie ? Préparez-en un dès aujourd'hui" %}</p>
+		</div>
+	</div>
 {% endblock %}
