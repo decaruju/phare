@@ -12,18 +12,20 @@
 		<form action="trans">
 		    <p>FR/EN</p>
 	    </form>
-
+	    <form action="login">
+		    <button> Connexion </button> <!-- trans -->
+	    </form>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-sm-3">
-			<a href="{%url 'flux' %}"> Fil </a>
+			<a href="{% url 'flux' %}"> Fil </a>
 		</div>
 		<div class="col-sm-6">
-			<a> Ressources disponibles </a>
+			<a href="{#% url 'choix_ressource' %#}"> Ressources disponibles </a> <!-- trans -->
 		</div>
 		<div class="col-sm-3">
-			<a> QUE FAIRE? </a>
+			<a href="{#% url 'que_faire' %#}"> QUE FAIRE? </a>
 		</div>
 	</div>
 	<nav class="navbar navbar-default">
