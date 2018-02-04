@@ -14,7 +14,7 @@ class Ressource(models.Model):
 
     a_hebergement = models.BooleanField()
     a_soins = models.BooleanField()
-    a_biens_essentiels = models.BooleanField()
+    a_transport = models.BooleanField()
     a_banque_alimentaire = models.BooleanField()
     a_assistance_psychologique = models.BooleanField()
     a_aide_financiere = models.BooleanField()

@@ -7,3 +7,8 @@ from ressources.models import Ressource
 
 def que_faire(request):
 	return render(request, 'que_faire.html')
+
+
+def que_faire_detail(request, sujet):
+	if(sujet=='innondation'):
+		return render(request, 'innondation.html')

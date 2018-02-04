@@ -12,7 +12,7 @@ def selection_ressource(request, choix):
     fields = {
         0: 'a_hebergement', 
         1: 'a_soins',
-        2: 'a_biens_essentiels',
+        2: 'a_transport',
         3: 'a_banque_alimentaire',
         4: 'a_assistance_psychologique',
         5: 'a_aide_financiere' 
@@ -27,7 +27,7 @@ def carte_ressources(request, choix):
     fields = {
         0: 'a_hebergement', 
         1: 'a_soins',
-        2: 'a_biens_essentiels',
+        2: 'a_transport',
         3: 'a_banque_alimentaire',
         4: 'a_assistance_psychologique',
         5: 'a_aide_financiere' 
