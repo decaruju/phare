@@ -4,25 +4,33 @@
 <header>
 	<div class="container">
         <div class="row">
-            <div class="col-sm-2" style="float:left;">
+            <div class="col-sm-2">
                 <img class="img-fluid" src="{% static 'images/enTete.png' %}" alt="Icône phare" id="entete-img"/>
                 <p style="margin-bottom:0px;">Le Phare</p> <!-- trans -->
             </div>
             <div class="col-sm-8">
-                <h1>Urgence : Shawinigan</h1>
+                <h1>Shawinigan</h1>
             </div>
             <div class="col-sm-2" style="text-align:right">
-                <div style="float:right">
-                    <form action="trans">
-                        <a href="">FR/EN</a>
-                    </form>
-                    <form action="">
-                        <button> S'enregistrer </button> <!-- trans -->
-                    </form>
-                    <form action="login">
-                        <button> Connexion </button> <!-- trans -->
-                    </form>
-                </div>
+			
+			{% get_current_language as LANGUAGE %}
+            <form action="{% url 'set_language' %}" method="post">
+				{% csrf_token %}
+				<input name="language" 
+					{% if LANGUAGE == 'en-us' %}
+						value="fr-ca"
+					{% else %}
+						value="en-us"
+					{% endif %}
+				type="hidden"/>
+                <button type="submit">FR/EN</button>
+            </form>
+	    <a href="/signup">
+                <button> S'enregistrer </button> <!-- trans -->
+	</a>
+	    <form action={% url "login" %}>
+                <button> Connexion </button> <!-- trans -->
+            </form>
             </div>
         </div>
     </div>

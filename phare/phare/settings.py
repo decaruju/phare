@@ -25,7 +25,7 @@ SECRET_KEY = 's6!^n+7_@cq@hnpq3^q&(gs4(gquwj24fe79b1d0hen+6llcq0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.108.143', '127.0.0.1']
+ALLOWED_HOSTS = ['192.168.108.143', '127.0.0.1', 'phare.aubrgin.com']
 
 
 # Application definition
@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'flux',
     'autorite',
     'ressources',
+	'quefaire',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -46,7 +47,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -136,7 +137,7 @@ STATICFILES_DIRS = (
 )
 
 LOCALE_PATHS = (
-    os.path.join(BASE_DIR, '/locale/'),
+    os.path.join(BASE_DIR, 'locale'),
 )
 
 LOGIN_REDIRECT_URL = 'accueil'
