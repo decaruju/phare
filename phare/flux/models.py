@@ -30,6 +30,9 @@ class Citoyen(models.Model):
     mobilite_reduite = models.BooleanField(default=False)
     matiere_dangereuse = models.BooleanField(default=False)
     nombre_individus = models.IntegerField(default=1)
+    adresse = models.CharField(max_length=250, default="")
+    latitude = models.DecimalField(max_digits=8, decimal_places=6, default=0.000000)
+    longitude = models.DecimalField(max_digits=8, decimal_places=6, default=0.000000)
 
 class Batiment(models.Model):
     adresse = models.CharField(max_length=30)

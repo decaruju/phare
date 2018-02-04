@@ -84,3 +84,8 @@ nav li a:hover:not(.active) {
 	text-align:center;
 	color:white;
 }
+
+/* ---- Styles pour ressources disponibles ---- */
+.ressource_choix{
+	margin:1%;
+}

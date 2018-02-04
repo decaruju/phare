@@ -10,33 +10,34 @@
 {% endblock %}
 
 {% block content %}
-
-	{% get_current_language as LANGUAGE %}
-	{{ LANGUAGE }}
-	<div class="row">
-		<div class="col-md-3">&nbsp;</div>
-		<div class="col-md-3 ressource_choix" id="ressource_medical">
+	<h2>{% trans 'Listes des ressources disponibles' %}</h2>
+	<p>{% trans "Vous trouverez ici l'ensemble des ressources disponibles dans votre secteur." %}
+	<br />{% trans "Cliquez sur un service pour connaître l'emplacement de la ressource la plus près de votre secteur." %}
+	<br />{% trans "Cette liste est mise à jour en cas de besoin." %}</p>
+	<div class="row justify-content-center">
+		<!--<div class="col-md-3">&nbsp;</div>-->
+		<div class="col-3 col-sm-5 ressource_choix" id="ressource_medical">
 			<p>{% trans 'Médical' %}</p>
 		</div>
-		<div class="col-md-3 ressource_choix" id="ressource_hebergement">
+		<div class="col-3 col-sm-5 ressource_choix" id="ressource_hebergement">
 			<p>{% trans 'Hébergement' %}</p>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-md-3">&nbsp;</div>
-		<div class="col-md-3 ressource_choix" id="ressource_nourriture">
+	<div class="row justify-content-center">
+		<!--<div class="col-md-3">&nbsp;</div>-->
+		<div class="col-3 col-sm-5 ressource_choix" id="ressource_nourriture">
 			<p>{% trans 'Nourriture' %}</p>
 		</div>
-		<div class="col-md-3 ressource_choix" id="ressource_financiere">
+		<div class="col-3 col-sm-5 ressource_choix" id="ressource_financiere">
 			<p>{% trans 'Aide financière' %}</p>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-md-3">&nbsp;</div>
-		<div class="col-md-3 ressource_choix" id="ressource_psychologique">
+	<div class="row justify-content-center">
+		<!--<div class="col-md-3">&nbsp;</div>-->
+		<div class="col-3 col-sm-5 ressource_choix" id="ressource_psychologique">
 			<p>{% trans 'Aide psychologique' %}</p>
 		</div>
-		<div class="col-md-3 ressource_choix" id="ressource_transport">
+		<div class="col-3 col-sm-5 ressource_choix" id="ressource_transport">
 			<p>{% trans 'Transport' %}</p>
 		</div>
 	</div>

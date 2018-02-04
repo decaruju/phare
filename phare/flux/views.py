@@ -13,3 +13,9 @@ def tous_messages(request):
     context_dict = {'messages': messages, 'langue': request.LANGUAGE_CODE}
     return render_to_response('tous_messages.html', context_dict, context)
 
+
+def vue_citoyen(request):
+    citoyens = Citoyen.objects.order_by('-adresse')
+    context = RequestContext(request)
+    context_dict = {'messages': messages}
+    return render_to_response('vue_citoyen.html', context_dict, context)
