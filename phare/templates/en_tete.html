@@ -2,37 +2,36 @@
 {% get_current_language as LANGUAGE_CODE %}
 {% load staticfiles %}
 <header>
-	<div class="container">
-        <div class="row">
-            <div class="col-sm-2">
-		    <a href='/'>
-                <img class="img-fluid" src="{% static 'images/enTete.png' %}" alt="Icône phare" id="entete-img"/>
-		    </a>
-            </div>
-            <div class="col-sm-8">
-                <h1>{% trans 'Urgence : Shawinigan' %}</h1>
-            </div>
-            <div class="col-sm-2" id="ent_boutons">
-			
-			{% get_current_language as LANGUAGE %}
+	<div class="container flex-container">
+        <div>
+            <a href='/'>
+                <img src="{% static 'images/enTete.png' %}" alt="Icône phare" id="entete-img"/>
+            </a>
+        </div>
+        <div id="ent_titre">
+            <h1>{% trans 'Urgence : Shawinigan' %}</h1>
+        </div>
+        <div id="ent_boutons">
+
+        {% get_current_language as LANGUAGE %}
             <form action="{% url 'set_language' %}" method="post">
-				{% csrf_token %}
-				<input name="language" 
-					{% if LANGUAGE == 'en-us' %}
-						value="ca-fr"
-					{% else %}
-						value="en-us"
-					{% endif %}
-				type="hidden"/>
+                {% csrf_token %}
+                <input name="language"
+                    {% if LANGUAGE=="en-us" %}
+                        value="ca-fr"
+                    {% else %}
+                        value="en-us"
+                    {% endif %}
+                type="hidden"/>
                 <button type="submit">FR/EN</button>
             </form>
-	    <a href="/signup">
-                <button> S'enregistrer </button> <!-- trans -->
-	</a>
-	    <form action="{% url 'login' %}">
-                <button> Connexion </button> <!-- trans -->
-        </form>
-            </div>
+            <a href="/signup">
+                    <button> S'enregistrer </button> <!-- trans -->
+            </a>
+            <form action="{% url 'login' %}">
+                    <button> Connexion </button> <!-- trans -->
+            </form>
+        </div>
         </div>
     </div>
 </header>
