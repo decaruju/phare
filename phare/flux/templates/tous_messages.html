@@ -26,15 +26,19 @@
 					{% if message.type_message == "u" %}
 						bg-danger
 					{% elif message.type_message == "n" %}	
-						bg-primary
+						bg-warning
 					{% else %}
 						bg-info
 					{% endif %}
 				">
 					<div class="message_icone">
 						<img src="
-							{% if message.auteur == "pompier" %} 
+							{% if message.auteur == "pompiers" %} 
 								{% static 'flux/images/pompiers.png' %}
+							{% elif message.auteur == "securite" %}
+								{% static 'flux/images/securite.png' %}
+							{% elif message.auteur == "police" %}
+								{% static 'flux/images/polices.png' %}
 							{% endif %}"						
 						class="img-fluid float-left"/>	
 					</div>				
