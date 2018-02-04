@@ -109,12 +109,12 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
 def gettext(s):
-    s
+    return s
 
 LANGUAGE_CODE = 'fr-ca'
 LANGUAGES = (
-    ('en-us', gettext('English')),
-    ('fr-ca', gettext('French')),
+    ('en-us', gettext('Anglais')),
+    ('fr-ca', gettext('Français')),
 )
 
 TIME_ZONE = 'UTC'
