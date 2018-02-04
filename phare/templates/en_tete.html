@@ -17,7 +17,7 @@
             <form action="{% url 'set_language' %}" method="post">
                 {% csrf_token %}
                 <input name="language"
-                    {% if LANGUAGE=='en-us' %}
+                    {% if LANGUAGE == 'en-us' %}
                         value="ca-fr"
                     {% else %}
                         value="en-us"
