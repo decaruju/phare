@@ -5,3 +5,9 @@
 {% block title %}
 	Sélectionner une ressource
 {% endblock %}
+
+{% block content %}
+	{% for ressource in ressources %}
+		{{ ressource.nom }}
+	{% endblock %}
+{% endblock %}
