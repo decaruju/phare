@@ -14,4 +14,4 @@ def selection_ressource(request, choix):
     ressources = Ressource.objects.filter(**kwargs)
     context = RequestContext(request)
     context_dict = {'ressources': ressources, 'langue': request.LANGUAGE_CODE}
-    return render_to_response('detail_ressources.html.j2', context_dict, context)
+    return render_to_response('detail_ressources.html', context_dict, context)
