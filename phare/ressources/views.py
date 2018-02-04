@@ -6,7 +6,7 @@ from ressources.models import Ressource
 # Create your views here.
 
 def choisir_ressource(request):
-    return render(request, "choix_ressource.html.j2")
+    return render(request, "choix_ressource.html")
 
 def selection_ressource(request, choix):
     fields = {

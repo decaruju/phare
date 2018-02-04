@@ -14,6 +14,10 @@
 		<link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}" type = "text/css"/>
 		<link rel="stylesheet" href="{% static 'css/bootstrap-reboot.min.css' %}" type = "text/css"/>
 		<link rel="stylesheet" href="{% static 'css/global-style.css' %}" type = "text/css"/>
+		<link rel="stylesheet" href="{% static 'css/tether.min.css' %}" type="text/css" />
+		<link rel="stylesheet" href="{% static 'css/tether-theme-arrows.min.css' %}" type="text/css" />
+		<link rel="stylesheet" href="{% static 'css/tether-theme-arrows-dark.min.css' %}" type="text/css" />
+		<link rel="stylesheet" href="{% static 'css/tether-theme-basic.min.css' %}" type="text/css" />
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		{% block stylesheets %}
@@ -21,14 +25,16 @@
 		{% endblock %}
 
         <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+		<script src="{% static 'js/tether.min.js' %}"></script>
 		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	
 
 	</head>
 	
 	<body>
 		{% include 'en_tete.html' %}
 		{% include 'menu.html' %}
-		<div class="container-fluid">
+		<div class="container">
 			{% block content %}
 			
 			{% endblock %}

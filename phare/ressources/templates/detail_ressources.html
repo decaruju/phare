@@ -2,4 +2,31 @@
 
 {% extends 'ressources.html' %}
 
+{% load i18n %}
+
+{% block title %}
+	{% trans 'Détail des ressources' %}
+{% endblock %}
+
+{% block content %}
+	{% for ress in ressources %}
+		<div class="row">
+			<div class="col-12 ressource-bloc">			
+				<div class="ressource-nom">
+					<h3>{{ ress.nom }}</h3>
+				</div>
+				<div class="ressource-adresse text-secondary">
+					{{ ress.adresse }}
+				</div>
+				<div class="ressource-description">
+					{% if langue == 'en_US' %}
+						{{ ress.description_en }}
+					{% else %}
+						{{ ress.description_fr }}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+{% endblock %}
 

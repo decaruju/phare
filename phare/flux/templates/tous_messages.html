@@ -11,9 +11,14 @@
 
 
 {% block content %}
+
+	<h2>Messages des autorités</h2>
+
+	<p class="text-secondary">Les messages ci-dessous sont publiés par les autorités civiles. La page se rafraîchit automatiquement toutes les 5 minutes. Merci de ne pas actualiser.</p>
+	
 	{% for message in messages %}
 		<div class=row">
-			<div class="col-8 message">
+			<div class="col-12 message">
 				<div class="message_titre
 					{% if message.type_message == "u" %}
 						bg-danger
