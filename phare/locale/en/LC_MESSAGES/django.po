@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-04 16:19+0000\n"
+"POT-Creation-Date: 2018-02-04 17:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -90,6 +90,28 @@ msgstr ""
 #: phare/settings.py:118
 msgid "Français"
 msgstr ""
+
+#: quefaire/templates/que_faire.html:14
+msgid "Que faire en cas de catastrophe"
+msgstr "What to do in case of a disaster"
+
+#: quefaire/templates/que_faire.html:19
+#, fuzzy
+#| msgid "Prévention inondation"
+msgid "Innondation"
+msgstr "Flood prevention"
+
+#: quefaire/templates/que_faire.html:22
+msgid "Feux de forêt"
+msgstr "Forest fire"
+
+#: quefaire/templates/que_faire.html:28
+msgid "Terrorisme"
+msgstr "Terrorism"
+
+#: quefaire/templates/que_faire.html:31
+msgid "Verglas"
+msgstr "Ice"
 
 #: ressources/templates/carte_ressources.html:32
 msgid "Localisation des ressources"
@@ -182,15 +204,15 @@ msgstr "Number of individuals"
 msgid "Urgence : Shawinigan"
 msgstr "Emergency : Shawinigan"
 
-#: templates/en_tete.html:33
+#: templates/en_tete.html:31
 msgid "Déconnexion"
 msgstr "Logout"
 
-#: templates/en_tete.html:38 templates/signup.html:6
+#: templates/en_tete.html:36 templates/signup.html:6
 msgid "S'inscrire"
 msgstr "Sign up"
 
-#: templates/en_tete.html:41 templates/registration/login.html:6
+#: templates/en_tete.html:39 templates/registration/login.html:6
 msgid "Connexion"
 msgstr "Sign in"
 
@@ -206,7 +228,7 @@ msgstr "Available ressources"
 msgid "QUE FAIRE?"
 msgstr "WHAT TO DO?"
 
-#: templates/menu.html:15
+#: templates/menu.html:16
 msgid "Profil"
 msgstr "Profile"
 
@@ -237,6 +259,10 @@ msgstr "Volunteering Red Cross"
 #: templates/pied_page.html:35
 msgid "Droits réservés"
 msgstr "All rights reserved"
+
+#: templates/profile.html:13
+msgid "Mettre à jour"
+msgstr "Update"
 
 #: templates/registration/logged_out.html:6
 msgid "Vous êtes déconnecté."

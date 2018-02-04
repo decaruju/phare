@@ -11,24 +11,24 @@
 {% endblock %}
 
 {% block content %}
-	<h2>Que faire en cas de catastrophe</h2>
+	<h2>{% trans "Que faire en cas de catastrophe" %}</h2>
 
 	<div class="row">
 		<div class="col-3"></div>
 		<div class="col-3">
-			<a href="{% url 'quefaire_detail' sujet='innondation' %}"> Innondation </a>
+			<a href="{% url 'quefaire_detail' sujet='innondation' %}"> {% trans "Innondation" %} </a>
 		</div>
 		<div class="col-3">
-			Feux de forêt
+			{% trans "Feux de forêt" %}
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-3"></div>
 		<div class="col-3">
-			Feux de forêt
+			{% trans "Terrorisme" %}
 		</div>
 		<div class="col-3">
-			Verglas
+			{% trans "Verglas" %}
 		</div>	
 	</div>
 {% endblock %}
