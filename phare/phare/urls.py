@@ -25,7 +25,7 @@ urlpatterns = [
     path('quefaire/', include('quefaire.urls')),
 
     path('', index, name='accueil'), 
-    path(r'i18n/', include('django.conf.urls.i18n')),
+    path(r'i18n/', include('django.conf.urls.i18n'), name='changement_langue'),
     path(r'login/', auth_views.login, name='login'),
     path(r'logout/', auth_views.logout, name='logout'),
 ]

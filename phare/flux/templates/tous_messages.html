@@ -39,7 +39,7 @@
 						class="img-fluid float-left"/>	
 					</div>				
 					<h3>
-					{% if langue == "en-US" %}
+					{% if langue == "en-us" %}
 						{{ message.titre_en }}
 					{% else %}
 						{{ message.titre_fr }}
@@ -52,7 +52,7 @@
 						{% trans 'Publié le : ' %}{{ message.horodatage|date:'d-m-Y'}}
 					</p>
 					<p>
-						{% if langue == "en-US" %}
+						{% if langue == "en-us" %}
 							{{ message.message_en }}
 						{% else %}
 							{{ message.message_fr }}

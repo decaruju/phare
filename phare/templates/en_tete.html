@@ -12,8 +12,18 @@
                 <h1>Shawinigan</h1>
             </div>
             <div class="col-sm-2" style="text-align:right">
-            <form action="trans">
-                <a href="">FR/EN</a>
+			
+			{% get_current_language as LANGUAGE %}
+            <form action="{% url 'set_language' %}" method="post">
+				{% csrf_token %}
+				<input name="language" 
+					{% if LANGUAGE == 'en-us' %}
+						value="fr-ca"
+					{% else %}
+						value="en-us"
+					{% endif %}
+				" type="hidden"/>
+                <button type="submit">FR/EN</button>
             </form>
             <form action="">
                 <button> S'enregistrer </button> <!-- trans -->
