@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
-from .views import index, signup, profile
+from .views import index, signup, profile, vue_citoyen
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,6 +25,7 @@ urlpatterns = [
     path('que-faire/', include('quefaire.urls')),
     path('autorite/', include('autorite.urls')),
     path('profile/', profile, name='profile'),
+    path('vue_citoyens', vue_citoyen, name="vue_citoyen"),
 
     path('', index, name='accueil'), 
     path(r'i18n/', include('django.conf.urls.i18n'), name='changement_langue'),

@@ -12,6 +12,12 @@ from flux.models import Citoyen
 def index(request):
     return render(request, "accueil.html") 
 
+def vue_citoyen(request):
+    citoyens = Citoyen.objects.order_by('-adresse')
+    context = RequestContext(request)
+    context_dict = {'citoyens': citoyens}
+    return render_to_response('vue_citoyens.html', context_dict, context)
+
 class SignupForm(ModelForm):
     class Meta:
         password = forms.CharField(widget=forms.PasswordInput)

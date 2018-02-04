@@ -15,8 +15,3 @@ def tous_messages(request):
     return render_to_response('tous_messages.html', context_dict, context)
 
 
-def vue_citoyen(request):
-    citoyens = Citoyen.objects.order_by('-adresse')
-    context = RequestContext(request)
-    context_dict = {'citoyens': citoyens}
-    return render_to_response('vue_citoyens.html', context_dict, context)
