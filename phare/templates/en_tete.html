@@ -11,7 +11,7 @@
         <div id="ent_titre">
             <h1>{% trans 'Urgence : Shawinigan' %}</h1>
         </div>
-        <div id="ent_boutons">
+        <div class="btn-group-vertical">
 
         {% get_current_language as LANGUAGE %}
             <form action="{% url 'set_language' %}" method="post">
@@ -23,22 +23,22 @@
                         value="en"
                     {% endif %}
                 type="hidden"/>
-                <button type="submit">FR/EN</button>
+                <button type="submit" class="btn btn-link">FR/EN</button>
             </form>
 			{% if user.is_authenticated %}
 			<a href="/signup">
-				<button>{{ user.username }} </button> <!-- trans -->
+				<button class="btn btn-primary">{{ user.username }} </button>
             </a>
             <form action="{% url 'logout' %}">
-                    <button> Déconnexion</button> <!-- trans -->
+                    <button class="btn btn-primary">{% trans 'Déconnexion' %}</button>
             </form>
 
 			{% else %}
             <a href="/signup">
-                    <button> S'enregistrer </button> <!-- trans -->
+                    <button class="btn btn-primary">{% trans "S'inscrire" %}</button>
             </a>
             <form action="{% url 'login' %}">
-                    <button> Connexion </button> <!-- trans -->
+                    <button class="btn btn-primary">{% trans 'Connexion' %}</button>
             </form>
 			{% endif %}
         </div>
