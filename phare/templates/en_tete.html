@@ -1,12 +1,12 @@
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% load staticfiles %}
 <header>
-    {% load i18n %}
-	{% get_current_language as LANGUAGE_CODE %}
-	{% load staticfiles %}
 	<div class="container">
         <div class="row">
             <div class="col-sm-2">
                 <img class="img-fluid" src="{% static 'images/enTete.png' %}" alt="Icône phare" id="entete-img"/>
-                <h1>Le Phare</h1> <!-- trans -->
+                <p style="margin-bottom:0px;">Le Phare</p> <!-- trans -->
             </div>
             <div class="col-sm-8">
                 <h1>Shawinigan</h1>
@@ -25,10 +25,10 @@
 				type="hidden"/>
                 <button type="submit">FR/EN</button>
             </form>
-            <form action="">
+	    <a href="/signup">
                 <button> S'enregistrer </button> <!-- trans -->
-            </form>
-            <form action="login">
+	</a>
+	    <form action={% url "login" %}>
                 <button> Connexion </button> <!-- trans -->
             </form>
             </div>
