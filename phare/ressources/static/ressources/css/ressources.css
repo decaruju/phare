@@ -28,3 +28,16 @@ div#ressource_psychologique {
 div#ressource_biens_essentiels {
 	background-color: rgb(50, 225, 225);
 }
+
+div.ressource-nom {
+	background-color: rgb(225, 50, 50);	
+}
+div.ressource-bloc div {
+	padding-left: 5px;
+}
+div.ressource-description {
+	border-bottom: 1pt solid black;
+	margin-bottom: 15px;
+}
+
+

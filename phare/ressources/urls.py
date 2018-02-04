@@ -7,5 +7,5 @@ from . import views
 
 urlpatterns = [
     path('', views.choisir_ressource, name="choix_ressource"),
-    path('/<int:choix>/', views.selection_ressource)
+    path('<int:choix>', views.selection_ressource)
 ]
