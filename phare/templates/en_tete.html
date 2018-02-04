@@ -25,12 +25,22 @@
                 type="hidden"/>
                 <button type="submit">FR/EN</button>
             </form>
+			{% if user.is_authenticated %}
+			<a href="/signup">
+				<button>{{ user.username }} </button> <!-- trans -->
+            </a>
+            <form action="{% url 'logout' %}">
+                    <button> Déconnexion</button> <!-- trans -->
+            </form>
+
+			{% else %}
             <a href="/signup">
                     <button> S'enregistrer </button> <!-- trans -->
             </a>
             <form action="{% url 'login' %}">
                     <button> Connexion </button> <!-- trans -->
             </form>
+			{% endif %}
         </div>
         </div>
     </div>
