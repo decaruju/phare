@@ -11,8 +11,20 @@ div.ressource_choix p {
 	padding: 5pt; 
 }
 div#ressource_medical {
-	background-color: rgb(225, 50, 50);
+	background-color: rgb(255, 50, 50);
 }
 div#ressource_hebergement {
 	background-color: rgb(50, 225, 50);
+}
+div#ressource_nourriture {
+	background-color: rgb(125, 125, 225);
+}
+div#ressource_financiere {
+	background-color: rgb(225, 225, 50);
+}
+div#ressource_psychologique {
+	background-color: rgb(225, 50, 225);
+}
+div#ressource_biens_essentiels {
+	background-color: rgb(50, 225, 225);
 }

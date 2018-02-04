@@ -10,3 +10,8 @@ def choisir_ressource(request):
     context = RequestContext(request)
     context_dict = {'ressources': ressources, 'langue': request.LANGUAGE_CODE}
     return render_to_response("choix_ressource.html.j2", context_dict, context)
+
+
+def detail_ressource(request):
+
+	return render_to_response(request, "choix_ressource.html.j2")
