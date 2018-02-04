@@ -10,6 +10,6 @@ def index(request):
 def tous_messages(request):
     messages = Message.objects.order_by('-horodatage')[:10]
     context = RequestContext(request)
-    context_dict = {'messages': messages}
+    context_dict = {'messages': messages, 'langue': request.LANGUAGE_CODE}
     return render_to_response('tous_messages.html.j2', context_dict, context)
 

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from resources.models import Ressource
+from ressources.models import Ressource
 
 admin.site.register(Ressource)
 

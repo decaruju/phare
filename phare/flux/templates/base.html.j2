@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 	{% load i18n %}
+<<<<<<< Updated upstream
+	{% load staticfiles %}
+=======
+	{% get_current_language as LANGUAGE_CODE %}
+>>>>>>> Stashed changes
 	<head>
 		<title>
 			{% block title %}
@@ -8,11 +13,13 @@
 		</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		{% load staticfiles %}
 		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type = "text/css"/>
 		<link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}" type = "text/css"/>
 		<link rel="stylesheet" href="{% static 'css/bootstrap-reboot.min.css' %}" type = "text/css"/>
 		<link rel="stylesheet" href="{% static 'css/global-style.css' %}" type = "text/css"/>
+		{% block stylesheets %}
+
+		{% endblock %}
 
 		<script src="{% static 'js/bootstrap.min.js' %}"></script>
 		<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>

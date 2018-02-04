@@ -1,0 +1,20 @@
+div.message {
+	margin-bottom:15px;
+}
+div.message_titre {
+	padding : 5px;
+	
+}
+div.message_titre h3 {
+	margin-left: 10pt;
+}
+div.message_icone {
+	max-width: 50px;
+}
+div.message_titre h3 {
+	display: inline-block;
+}
+div.message_contenu {
+	background-color : rgb(200, 200, 200);
+	padding-left: 3px;
+}

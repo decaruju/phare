@@ -1,9 +1,10 @@
 {% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 <h1>{% trans "Changer de langue" %}</h1>
 
 <form action="/i18n/setlang/" method="post">
     {% csrf_token %}
-    <input name="accueil" type="hidden" value="{% url 'accueil' %}" />
+    <input name="next" type="hidden" value="{% url 'accueil' %}" />
     
     <select name="language">
     {% for lang in LANGUAGES %}
