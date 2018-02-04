@@ -7,7 +7,8 @@ h1#titre {
 
 }
 h2 {
-	margin-top: 20px;
+	margin-top: 20px !important;
+	margin-bottom: 20px !important;
 }
 #ent_boutons{
 	text-align:right;
