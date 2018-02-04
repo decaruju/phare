@@ -17,19 +17,4 @@
       </ul>
 
     </nav>
-
-    <h1>{% trans "Changer de langue" %}</h1>
-
-    <form action="/i18n/setlang/" method="post">
-        {% csrf_token %}
-        <input name="next" type="hidden" value="{% url 'accueil' %}" />
-
-        <select name="language">
-        {% for lang in LANGUAGES %}
-            <option value="{{ lang.0 }}">{{ lang.1 }}</option>
-        {% endfor %}
-        </select>
-
-        <input type="submit" />
-    </form>
 </div>
