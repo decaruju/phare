@@ -6,9 +6,12 @@
 {% load staticfiles %}
 
 {% block title %}
-	{# trans "Messages des autorités" #}
+	{% trans 'Messages des autorités' %}
 {% endblock %}
 
+{% block scripts %}
+	<script src="{% static 'flux/js/rafraichir_message.js' %}"></script>
+{% endblock %}
 
 {% block content %}
 
@@ -46,7 +49,7 @@
 					
 				<div class="message_contenu">
 					<p class="text-dark">
-						{% trans 'Publié le :' %}{{ message.horodatage|date:'d-m-Y'}}
+						{% trans 'Publié le : ' %}{{ message.horodatage|date:'d-m-Y'}}
 					</p>
 					<p>
 						{% if langue == "en-US" %}
