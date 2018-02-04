@@ -9,7 +9,7 @@ from django.contrib.auth import authenticate, login
 def index(request):
     return render(request, "accueil.html") 
 
-class SignupForm(forms.Form):
+class SignupForm(ModelForm):
     username = forms.CharField()
     email = forms.EmailField()
     raw_password = forms.CharField(widget=forms.PasswordInput)
