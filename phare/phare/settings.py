@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'flux',
     'autorite',
     'ressources',
+	'quefaire',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
