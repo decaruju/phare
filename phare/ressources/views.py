@@ -6,12 +6,12 @@ from ressources.models import Ressource
 # Create your views here.
 
 def choisir_ressource(request):
-    ressources = Ressource.objects.all()
+    return render(request, "choix_ressource.html.j2")
+
+def selection_ressource(request, choix):
+    fields = {0: 'a_hebergement', 1: 'a_soins'}
+    kwargs = {fields[choix]: True}
+    ressources = Ressource.objects.filter(**kwargs)
     context = RequestContext(request)
     context_dict = {'ressources': ressources, 'langue': request.LANGUAGE_CODE}
-    return render_to_response("choix_ressource.html", context_dict, context)
-
-
-def detail_ressource(request):
-
-	return render_to_response(request, "choix_ressource.html")
+    return render_to_response('detail_ressources.html', context_dict, context)
