@@ -1,0 +1,75 @@
+{# Affiche les différentes ressources sur la carte #}
+
+{% extends 'ressources.html' %}
+
+{% load staticfiles %}
+{% load i18n %}
+
+{% get_current_language as LANGUAGE %}
+	
+{% block scripts %}
+	<script>
+		var map;
+		function initMap() {
+			var trou = {lat: 46.540, lng: -72.753};
+			map = new google.maps.Map(document.getElementById('map'), {
+			  zoom: 9,
+			  center: trou
+			});
+	 	 }
+		var marqueurs = [];
+		ajoutMarqueur = function(lattitude, longitude, titre) {
+			marqueurs.push({lat: lattitude, lng: longitude, title: titre});
+			/*new google.maps.Marker({
+				position: {lat: lattitude, lng: longitude},
+				map: map
+			});*/
+		}
+	</script>
+{% endblock %}
+
+{% block content %}
+	<h2>{% trans 'Localisation des ressources' %}</h2>
+
+	<div class="row">
+		<div class="col-4">
+			{% for ress in ressources %}
+				<div class="row">
+					<div class="col-12">
+						<div class="liste-ressource">
+							<script>
+								ajoutMarqueur( {{ ress.latitude }}, {{ ress.longitude }}, "{{ ress.nom|safe }}"); 
+							</script>
+							{% if LANGUAGE == "en-us" %}
+								<h5> class="nom-liste-ressource text-primary">
+									{{ ress.nom }}
+								</h5>
+							{% else %}
+								<h5 class="nom-liste-ressource text-primary">
+									{{ ress.nom }}
+								</h5>
+							{% endif %}
+							<div class="adresse-liste-ressource">
+								{{ ress.adresse }}
+							</div>
+						</div>
+					</div>
+				</div>	
+			{% endfor %}
+		</div>
+		<div class="col-8">
+			<div id="map" style="height:400px"></div>
+		</div>
+	</div>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFzmy_UhVDjvynIXwXjFnGbKySoM_gb9o&callback=initMap"></script>
+	<script>
+		for(var i = 0; i < marqueurs.length; i++) {
+			var marque = new google.maps.Marker({
+				position: {lat: marqueurs[i].lat, lng: marqueurs[i].lng},
+				map: map,
+				title: marqueurs[i].title,
+			});
+		}
+	</script>	
+{% endblock %}
