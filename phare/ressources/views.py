@@ -9,7 +9,14 @@ def choisir_ressource(request):
     return render(request, "choix_ressource.html")
 
 def selection_ressource(request, choix):
-    fields = {0: 'a_hebergement', 1: 'a_soins'}
+    fields = {
+            0: 'a_hebergement', 
+            1: 'a_soins',
+            2: 'a_biens_essentiels',
+            3: 'a_banque_alimentaire',
+            4: 'a_assistance_psychologique',
+            5: 'a_aide_financiere' 
+    }
     kwargs = {fields[choix]: True}
     ressources = Ressource.objects.filter(**kwargs)
     context = RequestContext(request)
