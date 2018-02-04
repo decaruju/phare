@@ -20,7 +20,7 @@ def selection_ressource(request, choix):
     kwargs = {fields[choix]: True}
     ressources = Ressource.objects.filter(**kwargs)
     context = RequestContext(request)
-    context_dict = {'ressources': ressources, 'langue': request.LANGUAGE_CODE}
+    context_dict = {'ressources': ressources, 'langue': request.LANGUAGE_CODE, 'choix' : choix}
     return render_to_response('detail_ressources.html', context_dict, context)
 
 def carte_ressources(request, choix):

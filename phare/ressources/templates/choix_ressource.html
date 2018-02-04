@@ -17,28 +17,28 @@
 	<div class="row justify-content-center">
 		<!--<div class="col-md-3">&nbsp;</div>-->
 		<div class="col-3 col-sm-5 ressource_choix" id="ressource_medical">
-			<p>{% trans 'Médical' %}</p>
+			<p class="ressource_choix"><a href="{% url 'detail_ressource' choix=1 %}">{% trans 'Médical' %}</a></p>
 		</div>
 		<div class="col-3 col-sm-5 ressource_choix" id="ressource_hebergement">
-			<p>{% trans 'Hébergement' %}</p>
+			<p class="ressource_choix"><a href="{% url 'detail_ressource' choix=0 %}">{% trans 'Hébergement' %}</a></p>
 		</div>
 	</div>
 	<div class="row justify-content-center">
 		<!--<div class="col-md-3">&nbsp;</div>-->
 		<div class="col-3 col-sm-5 ressource_choix" id="ressource_nourriture">
-			<p>{% trans 'Nourriture' %}</p>
+			<p class="ressource_choix"><a href="{% url 'detail_ressource' choix=3 %}">{% trans 'Nourriture' %}</a></p>
 		</div>
 		<div class="col-3 col-sm-5 ressource_choix" id="ressource_financiere">
-			<p>{% trans 'Aide financière' %}</p>
+			<p class="ressource_choix"><a href="{% url 'detail_ressource' choix=5 %}">{% trans 'Aide financière' %}</a></p>
 		</div>
 	</div>
 	<div class="row justify-content-center">
 		<!--<div class="col-md-3">&nbsp;</div>-->
 		<div class="col-3 col-sm-5 ressource_choix" id="ressource_psychologique">
-			<p>{% trans 'Aide psychologique' %}</p>
+			<p class="ressource_choix"><a href="{% url 'detail_ressource' choix=4 %}">{% trans 'Aide psychologique' %}</a></p>
 		</div>
 		<div class="col-3 col-sm-5 ressource_choix" id="ressource_transport">
-			<p>{% trans 'Transport' %}</p>
+			<p class="ressource_choix"><a href="{% url 'detail_ressource' choix=2 %}">{% trans 'Transport' %}</a></p>
 		</div>
 	</div>
 {% endblock %}
