@@ -19,8 +19,8 @@ header>div {
 #entete-img {
 	width: 128px;
 }
-#ent_boutons{
-	text-align:right;
+.btn-group-vertical button{
+	margin:1px;
 }
 h2 {
 	margin-top: 20px !important;
@@ -50,6 +50,10 @@ nav li a {
 	padding: 8px 16px;
     text-decoration: none;
 }
+#btn-profil{
+	float:right;
+	border-right: 0px solid #bbb;
+}
 
 nav li a.active {
     background-color: #29434e;
@@ -72,7 +76,8 @@ nav li a:hover:not(.active) {
 #pp_info{
 	background-color:#546e7a;
 	color:white;
-	padding-top:1em
+	padding-top:1em;
+	margin-top:1em;
 }
 #pp_info a, #pp_signature a{
 	color:white;

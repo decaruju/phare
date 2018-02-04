@@ -7,7 +7,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login
 from django.conf import settings
 from django.contrib.auth.models import User
-
+from flux.models import Citoyen
 
 def index(request):
     return render(request, "accueil.html") 
@@ -44,3 +44,21 @@ def signup(request):
         form = UserCreationForm()
     return render(request, 'signup.html', {'form': form})
 
+
+class CitoyenForm(ModelForm):
+    class Meta:
+        model = Citoyen
+        fields = '__all__'
+        exclude = ['user']
+
+
+def profile(request):
+    if request.method == 'POST':
+        form = CitoyenForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('accueil')
+    else:
+        form = CitoyenForm()
+
+    return render(request, 'profile.html', {'form': form})
