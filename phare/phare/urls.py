@@ -23,6 +23,7 @@ urlpatterns = [
     path('flux/', include('flux.urls')), 
     path('ressources/', include('ressources.urls')), 
     path('que-faire/', include('quefaire.urls')),
+    path('autorite/', include('autorite.urls')),
 
     path('', index, name='accueil'), 
     path(r'i18n/', include('django.conf.urls.i18n'), name='changement_langue'),
