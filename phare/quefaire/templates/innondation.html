@@ -1,0 +1,54 @@
+{# Description de la marche à suivre en cas d'innondation #}
+
+{% extends 'structure_quefaire.html' %}
+
+{% block preparation %}
+	<ul>
+		<li>Éviter les appareils électriques près des planchers innondables. Débrancher les appareils au besoin.</li>
+		<li>Dégager l'accès à la boîte électrique.</li>
+		<li>S'assurer de la qualité des calfeutrages au niveau du sol. Les remplacer au besoin. <span class="text-secondary">Éviter de remplacer les joins de calfeutrage par temps humide ou si la température est inférieure à 5&deg;C</span></li>
+		<li>Rester attentif à l'évolution de la situation par les médias et le <a href="{% url 'flux' %}"> flux </a></li> 
+	</ul>
+{% endblock %}
+{% block agir %}
+	<h5>Infiltration d'eau</h5>
+	<ul>
+		<li>Boucher le drain du sous-sol</li>
+		<li>Dégager le plancher innondé</li>
+		<li>Fermer le gaz et l'électricité. <span class="text-danger">Si des fils sous tension sont en contact avec l'eau utiliser une perche ou contacter les autorités si vous ne pouvez exécuter la manoeuvre sans vous mettre en danger.</span></li>
+	</ul>
+	<h5>Si la situation se déteriore : préparez-vous à évacuer</h5>
+	<ul>
+		<li>Rassembler les objets essentiels suivants :
+			<ul>
+				<li>Vêtements chauds et imperméable</li>
+				<li>Médicament sous ordonnance</li>		
+				<li>Documents d'identification (carte d'assurance maladie, carte d'assurance sociale, passeport)</li>		
+				<li>Argent</li>	
+			</ul>
+		</li>
+		<li>Communiquer avec les autorités :
+			<ul>
+				<li>Si la situation se déteriore au point où il est dangereux de demeurer à votre domicile.</li>
+				<li>Si vous avez des personnes à mobilité réduite ou qui nécessite une attention particulière en cas d'évacuation.</li>
+				<li>S'il est impossible d'atteindre votre domicile.
+			</ul>
+		</li>
+		<li>Prévoyez :
+			<ul>
+				<li>Prévoyez votre lieu d'évacuation avec un membre de la famille, un ami ou une des <a href="{% url 'detail_ressource' choix=0 %}">ressources d'hébergement offerte</a>
+				<li>Prévoyez votre moyen de déplacement. <span class="text-danger">Il peut être impossible d'utiliser votre voiture pour quitter votre domicile, prévoyez une alternative</span> Des <a href="{% url 'detail_ressource' choix=2 %}"> ressources de transport</a> sont disponibles pour vous accompagner hors des zones évacuées.
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<h5>Évacuer</h5>
+	<ul>
+		<li><span="text-danger">Suivre en tout temps les indications du personnel de la sécurité civil sur place</span></li>
+		<li>Rassembler rapidement vos effets personnels</li>
+		<li>Dirigez-vous hors la zone évacuée selon le plan établi</li>
+		<li>Communiquer avec les autorités et suivez l'évolution de la situation</li>
+		<li>Au besoin, utilisez les <a href="{% url 'choix_ressource' %}">ressources</a> mise à votre disposition. Les ressources disponibles sont mises à jour régulièrement.</li>
+	</ul>
+	
+{% endblock %}
