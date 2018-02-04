@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-04 04:04+0000\n"
+"POT-Creation-Date: 2018-02-04 05:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,26 +17,109 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: flux/templates/accueil.html:20
-msgid "Allo"
-msgstr "Hello !"
-
 #: flux/templates/tous_messages.html:9
 msgid "Messages des autorités"
-msgstr ""
+msgstr "Emergency announcements"
 
-#: flux/templates/tous_messages.html:54
+#: flux/templates/tous_messages.html:20
+msgid ""
+"Les messages ci-dessous sont publiés par les autorités civiles. La page se "
+"rafraîchit automatiquement toutes les 5 minutes. Merci de ne pas actualiser."
+msgstr ""
+"The messages below are published by civil authorities. This page will "
+"refresh automatically every 5 minutes. Please do not refresh."
+
+#: flux/templates/tous_messages.html:52
 msgid "Publié le : "
-msgstr ""
-
-#: phare/settings.py:116
-msgid "Anglais"
-msgstr ""
+msgstr "Published on : "
 
 #: phare/settings.py:117
+msgid "Anglais"
+msgstr "English"
+
+#: phare/settings.py:118
 msgid "Français"
-msgstr ""
+msgstr "French"
+
+#: ressources/templates/choix_ressource.html:15
+msgid "Médical"
+msgstr "Medical"
+
+#: ressources/templates/choix_ressource.html:18
+msgid "Hébergement"
+msgstr "Shelter"
+
+#: ressources/templates/choix_ressource.html:24
+msgid "Nourriture"
+msgstr "Food"
+
+#: ressources/templates/choix_ressource.html:27
+msgid "Aide financière"
+msgstr "Financial aid"
+
+#: ressources/templates/choix_ressource.html:33
+msgid "Aide psychologique"
+msgstr "Psychological assistance"
+
+#: ressources/templates/choix_ressource.html:36
+msgid "Biens essentiels"
+msgstr "Essential goods"
 
 #: ressources/templates/detail_ressources.html:8
 msgid "Détail des ressources"
-msgstr ""
+msgstr "Resource details"
+
+#: templates/en_tete.html:9
+msgid "Le Phare"
+msgstr "Beacon"
+
+#: templates/en_tete.html:12
+msgid "Urgence : Shawinigan"
+msgstr "Shawinigan : Emergency"
+
+#: templates/menu.html:9
+msgid "Fil d'actualité"
+msgstr "News feed"
+
+#: templates/menu.html:12
+msgid "Ressources disponibles"
+msgstr "Available resources"
+
+#: templates/menu.html:15
+msgid "QUE FAIRE?"
+msgstr "WHAT TO DO"
+
+#: templates/pied_page.html:13
+msgid "Autres ressources"
+msgstr "Other resources"
+
+#: templates/pied_page.html:15
+msgid "Croix-Rouge : sinistre"
+msgstr "Red-Cross : Natural disaster"
+
+#: templates/pied_page.html:16
+msgid "Prévention inondation"
+msgstr "Flood prevention"
+
+#: templates/pied_page.html:17
+msgid "Québec 511"
+msgstr "Quebec 511"
+
+#: templates/pied_page.html:24
+msgid "Pour aider"
+msgstr "How to help"
+
+#: templates/pied_page.html:26
+msgid "Faire un don"
+msgstr "Donate"
+
+#: templates/pied_page.html:27
+msgid "Bénévolat Croix-Rouge"
+msgstr "Volunteer with Red-Cross"
+
+#: templates/registration/logged_out.html:6
+msgid "Vous êtes déconnecté."
+msgstr "You are logged out"
+
+#~ msgid "Allo"
+#~ msgstr "Hello !"

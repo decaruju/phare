@@ -1,45 +1,39 @@
-<footer class="page-footer blue center-on-small-only">
-    {% load i18n %}
-	{% get_current_language as LANGUAGE_CODE %}
-	{% load staticfiles %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% load staticfiles %}
 
-<footer class="mainfooter" role="contentinfo">
-  <div class="footer-top p-y-2"></div>
-  <div class="footer-middle">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-sm-12">
-            <!--Column1-->
-            <div class="footer-pad">
-              <h4>Autres ressources</h4>
-              <ul class="list-unstyled">
-                <li><a href="http://www.croixrouge.ca/nos-champs-d-action/urgences-et-catastrophes-au-canada/votre-maison-et-votre-famille/sinistres-individuels-infographie">Croix-Rouge : sinistre</a></li>
-                <li><a href="https://www.canada.ca/fr/campagne/prevention-inondation.html">Prévention inondation</a></li>
-                <li><a href="http://www.quebec511.info/fr/default.aspx">Québec 511</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <!--Column1-->
-            <div class="footer-pad">
-              <h4>Pour aider</h4>
-              <ul class="list-unstyled">
-                <li><a href="http://www.croixrouge.ca/faites-un-don/appel/faites-un-don-au-fonds-de-la-croix-rouge-canadienne#f45810d4-6631-44a4-be1e-e58c3f2a0bf7">Faire un don</a></li>
-                <li><a href="http://www.croixrouge.ca/benevolat">Bénévolat Croix-Rouge</a></li>
-              </ul>
-            </div>
-          </div>
+<footer class="container-fluid">
+    <div class="container" id="pp_info">
+    <div class="row">
+      <div class="col-sm-6">
+        <!--Column1-->
+        <div class="footer-pad">
+          <h4>Autres informations</h4>
+          <ul class="list-unstyled">
+            <li><a href="http://www.croixrouge.ca/nos-champs-d-action/urgences-et-catastrophes-au-canada/votre-maison-et-votre-famille/sinistres-individuels-infographie">Croix-Rouge : sinistre</a></li>
+            <li><a href="https://www.canada.ca/fr/campagne/prevention-inondation.html">Prévention inondation</a></li>
+            <li><a href="http://www.quebec511.info/fr/default.aspx">Québec 511</a></li>
+          </ul>
         </div>
       </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <!--Footer Bottom-->
-          <p class="text-xs-center">Copyright &copy; 2018 - <a href="http://phare.aubrgin.com"> phare.aubrgin.com </a></p>
+      <div class="col-sm-6">
+        <!--Column1-->
+        <div class="footer-pad">
+          <h4>Pour aider</h4>
+          <ul class="list-unstyled">
+            <li><a href="http://www.croixrouge.ca/faites-un-don/appel/faites-un-don-au-fonds-de-la-croix-rouge-canadienne#f45810d4-6631-44a4-be1e-e58c3f2a0bf7">Faire un don</a></li>
+            <li><a href="http://www.croixrouge.ca/benevolat">Bénévolat Croix-Rouge</a></li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
+    <div class="container" id="pp_signature">
+      <div class="row">
+        <div class="col-sm-12">
+          <!--Footer Bottom-->
+          <p>Copyright &copy; 2018 - <a href="http://phare.aubrgin.com"> phare.aubrgin.com </a></p>
+        </div>
+      </div>
+    </div>
 </footer>
