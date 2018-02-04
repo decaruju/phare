@@ -10,6 +10,10 @@ div.message_titre h3 {
 }
 div.message_icone {
 	max-width: 50px;
+	max-height: 50px;
+}
+div.message_icone img{
+	max-height: 40px;
 }
 div.message_titre h3 {
 	display: inline-block;
