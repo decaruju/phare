@@ -54,6 +54,17 @@ nav li a {
 	float:right;
 	border-right: 0px solid #bbb;
 }
+#echange_langue, #btn_deco, #user_id, #btn_conf1, #btn_conf2,#btn_conf3, #btn_inscription, #btn_MAJ{
+	width:10em;
+}
+#user_id{
+	text-align:center;
+	padding-bottom:3px;
+	color:black;
+}
+#btn_MAJ{
+	margin-top:1em;
+}
 
 nav li a.active {
     background-color: #29434e;
