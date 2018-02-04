@@ -28,6 +28,12 @@ div#ressource_psychologique {
 div#ressource_transport {
 	background-color: rgb(50, 225, 225);
 }
+P.ressource_choix a {
+	color: black !important;
+}
+p.ressource_choix a:hover {
+	text-decoration: none;
+}
 
 div.ressource-nom {
 	background-color: rgb(225, 50, 50);	

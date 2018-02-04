@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-04 14:51+0000\n"
+"POT-Creation-Date: 2018-02-04 16:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,9 +30,9 @@ msgid ""
 "situation"
 msgstr ""
 "LIGHTHOUSE web app is a communication assistant helping autorities to "
-"communicate with the population when crisis events occurs. It is also "
-"a precious information source to prepare yourself and react adequality "
-" according to the situation"
+"communicate with the population when crisis events occurs. It is also a "
+"precious information source to prepare yourself and react adequality  "
+"according to the situation"
 
 #: flux/templates/accueil.html:19
 msgid "Événements en cours"
@@ -58,16 +58,14 @@ msgstr "Reminders"
 msgid ""
 "En période hivernale assurez-vous de garder une pelle et une couverture dans "
 "votre voiture."
-msgstr ""
-"During winter, make sure to keep shovel and blanket in your car"
+msgstr "During winter, make sure to keep shovel and blanket in your car"
 
 #: flux/templates/accueil.html:27
 msgid ""
 "Avez-vous un plan d'évacuation de votre domicile en cas d'incendie ? "
 "Préparez-en un dès aujourd'hui"
 msgstr ""
-"Have you a evacuation plan of your house in case of fire ?"
-"Prepare one today."
+"Have you a evacuation plan of your house in case of fire ?Prepare one today."
 
 #: flux/templates/tous_messages.html:9 flux/templates/tous_messages.html:18
 msgid "Messages des autorités"
@@ -79,7 +77,7 @@ msgid ""
 "rafraîchit automatiquement toutes les 5 minutes. Merci de ne pas actualiser."
 msgstr ""
 "Messages below are published by the civil autorities. This page refresh "
-"automatically each 5 minutes. Thanks to not refresh." 
+"automatically each 5 minutes. Thanks to not refresh."
 
 #: flux/templates/tous_messages.html:52
 msgid "Publié le : "
@@ -97,27 +95,48 @@ msgstr ""
 msgid "Localisation des ressources"
 msgstr "Ressource locator"
 
-#: ressources/templates/choix_ressource.html:19
+#: ressources/templates/choix_ressource.html:13
+#, fuzzy
+#| msgid "Ressources disponibles"
+msgid "Listes des ressources disponibles"
+msgstr "Available ressources"
+
+#: ressources/templates/choix_ressource.html:14
+msgid ""
+"Vous trouverez ici l'ensemble des ressources disponibles dans votre secteur."
+msgstr "You will find here all ressources available in your area"
+
+#: ressources/templates/choix_ressource.html:15
+msgid ""
+"Cliquez sur un service pour connaître l'emplacement de la ressource la plus "
+"près de votre secteur."
+msgstr "Click on a service to find the closest ressource to you"
+
+#: ressources/templates/choix_ressource.html:16
+msgid "Cette liste est mise à jour en cas de besoin."
+msgstr "This list is updated in changes occurs"
+
+#: ressources/templates/choix_ressource.html:20
 msgid "Médical"
 msgstr "Health"
 
-#: ressources/templates/choix_ressource.html:22
+#: ressources/templates/choix_ressource.html:23
 msgid "Hébergement"
 msgstr "Shelter"
 
-#: ressources/templates/choix_ressource.html:28
+#: ressources/templates/choix_ressource.html:29
 msgid "Nourriture"
 msgstr "Food"
 
-#: ressources/templates/choix_ressource.html:31
+#: ressources/templates/choix_ressource.html:32
 msgid "Aide financière"
 msgstr "Financial aid"
 
-#: ressources/templates/choix_ressource.html:37
+#: ressources/templates/choix_ressource.html:38
 msgid "Aide psychologique"
 msgstr "Pyschologic aid"
 
-#: ressources/templates/choix_ressource.html:40
+#: ressources/templates/choix_ressource.html:41
 msgid "Transport"
 msgstr "Transportation"
 
@@ -129,9 +148,51 @@ msgstr "Ressources detail"
 msgid "Cliquez pour voir la carte"
 msgstr "Clic to show the map"
 
+#: ressources/templates/vue_citoyens.html:23
+msgid "Vue des citoyens"
+msgstr "Citizen view"
+
+#: ressources/templates/vue_citoyens.html:24
+#, fuzzy
+#| msgid "Cliquez pour voir la carte"
+msgid "Voir la carte"
+msgstr "Clic to show the map"
+
+#: ressources/templates/vue_citoyens.html:29
+msgid "Nom"
+msgstr "Name"
+
+#: ressources/templates/vue_citoyens.html:29
+msgid "Adresse"
+msgstr "Address"
+
+#: ressources/templates/vue_citoyens.html:29
+msgid "Matière dangereuse"
+msgstr "Hazardous material "
+
+#: ressources/templates/vue_citoyens.html:29
+msgid "Mobilité réduite"
+msgstr "Disabilities"
+
+#: ressources/templates/vue_citoyens.html:29
+msgid "Nombre d'individus"
+msgstr "Number of individuals"
+
 #: templates/en_tete.html:12
 msgid "Urgence : Shawinigan"
 msgstr "Emergency : Shawinigan"
+
+#: templates/en_tete.html:33
+msgid "Déconnexion"
+msgstr "Logout"
+
+#: templates/en_tete.html:38 templates/signup.html:6
+msgid "S'inscrire"
+msgstr "Sign up"
+
+#: templates/en_tete.html:41 templates/registration/login.html:6
+msgid "Connexion"
+msgstr "Sign in"
 
 #: templates/menu.html:6 templates/menu.html:12
 msgid "Fil d'actualité"
@@ -145,6 +206,42 @@ msgstr "Available ressources"
 msgid "QUE FAIRE?"
 msgstr "WHAT TO DO?"
 
+#: templates/menu.html:15
+msgid "Profil"
+msgstr "Profile"
+
+#: templates/pied_page.html:11
+msgid "Autres informations"
+msgstr "Other informations"
+
+#: templates/pied_page.html:13
+msgid "Croix-Rouge : sinistre"
+msgstr "Red cross : sinister"
+
+#: templates/pied_page.html:14
+msgid "Prévention inondation"
+msgstr "Flood prevention"
+
+#: templates/pied_page.html:22
+msgid "Pour aider"
+msgstr "To help"
+
+#: templates/pied_page.html:24
+msgid "Faire un don"
+msgstr "Make a donation"
+
+#: templates/pied_page.html:25
+msgid "Bénévolat Croix-Rouge"
+msgstr "Volunteering Red Cross"
+
+#: templates/pied_page.html:35
+msgid "Droits réservés"
+msgstr "All rights reserved"
+
 #: templates/registration/logged_out.html:6
 msgid "Vous êtes déconnecté."
-msgstr ""
+msgstr "You are logout"
+
+#: templates/registration/login.html:10 templates/signup.html:21
+msgid "Confirmer"
+msgstr "Confirm"
