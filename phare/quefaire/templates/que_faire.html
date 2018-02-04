@@ -14,21 +14,27 @@
 	<h2>{% trans "Que faire en cas de catastrophe" %}</h2>
 
 	<div class="row">
-		<div class="col-3"></div>
-		<div class="col-3">
+		<p>
+		<div class="col-3 col-sm-5 que-faire_choix" id="que-faire_innondation">
 			<a href="{% url 'quefaire_detail' sujet='innondation' %}"> {% trans "Innondation" %} </a>
 		</div>
-		<div class="col-3">
-			{% trans "Feux de forêt" %}
+		</p>
+		<p>
+		<div class="col-3 col-sm-5 que-faire_choix" id="que-faire_feux-de-foret">
+			<a>{% trans "Feux de forêt" %}</a>
 		</div>
+		</p>
 	</div>
 	<div class="row">
-		<div class="col-3"></div>
-		<div class="col-3">
-			{% trans "Terrorisme" %}
+		<p>
+		<div class="col-3 col-sm-5 que-faire_choix" id="que-faire_terrorisme">
+			<a>{% trans "Terrorisme" %}</a>
 		</div>
-		<div class="col-3">
-			{% trans "Verglas" %}
+		</p>
+		<p>
+		<div class="col-3 col-sm-5 que-faire_choix" id="que-faire_verglas">
+			<a>{% trans "Verglas" %}</a>
 		</div>	
+		</p>
 	</div>
 {% endblock %}

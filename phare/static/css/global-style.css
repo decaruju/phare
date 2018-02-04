@@ -105,3 +105,8 @@ nav li a:hover:not(.active) {
 .ressource_choix{
 	margin:1%;
 }
+.ressource_choix a{
+	display:block;
+	padding:0;
+	margin:0;
+}

@@ -2,4 +2,37 @@ p.donnees-urgence {
 	font-weight: bold;
 	font-size: 14pt;
 }
+div.que-faire_choix {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-radius: 10px;
+	margin: 10px;
+}
+div.que-faire_choix p {
+	text-align: center;
+	margin: 0px;
+	font-weight: bold;
+	padding: 5pt; 
+}
+div#que-faire_innondation {
+	background-color: rgb(125, 125, 225);
+}
+div#que-faire_terrorisme {
+	background-color: rgb(225, 225, 50);
+}
+div#que-faire_feux-de-foret {
+	background-color: rgb(225, 50, 225);
+}
+div#que-faire_verglas {
+	background-color: rgb(50, 225, 225);
+}
+
+div.que-faire_choix a {
+	color: black !important;
+	display:block;
+	text-align:center;
+}
+div.que-faire_choix a:hover {
+	text-decoration: none;
+}
 
